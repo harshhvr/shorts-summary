@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Shorts</title>
+    <!-- My CSS -->
+    <link rel="stylesheet" href="/style/index.css" />
+    <!-- My Functions -->
+    <script src="/js/functions.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-inner">
+        <div class="logo">
+          <img
+            src="/assets/youtube-shorts.svg"
+            alt="YouTube Shorts"
+            class="brand-icon"
+          />
+          <h1 class="brand-name">Shorts</h1>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main-inner">
+        <section class="section">
+          <div class="section-body">
+            <a href="/shorts/Ejzel7VfnMI" class="">Ejzel7VfnMI</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script type="text/javascript">
+      const videoId = document.querySelector('#videoId');
+      const iframe = document.querySelector('iframe#videoEmbed');
+      const img = document.querySelector('img#videoThumbnail');
+
+      const ytShortVideoId = 'Ejzel7VfnMI'; // Video Id
+
+      const ytShort = getYtShort(ytShortVideoId);
+
+      videoId.innerHTML = ytShortVideoId;
+
+      iframe.src = ytShort.embed_url;
+      img.src = ytShort.thumbnail_url;
+    </script>
+  </body>
+</html>
